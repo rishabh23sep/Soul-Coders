@@ -1,0 +1,165 @@
+<html>
+    <head>
+        <title>Arithmetic Simulator</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href=".\css\arith_sim.css">
+    </head>
+    <body>
+      <div id="nav">Arithmetic Operations<a id="ins">Instructions</a><a><div id="sm">i</div></a></div>
+    <!-- simulator -->
+    <div id="head1">Program</div>
+    <div class="container1">
+        <form>
+          <div class="space">
+          <label for="fno">Enter The First Number</label>
+          <input type="text" id="first" name="firstname" placeholder="Enter The First Number">
+          </div>
+          <div class="space">
+          <label for="lno">Enter The Second Number</label>
+          <input type="text" id="last" name="lastname" placeholder="Enter The Second Number">
+          </div>
+          <div class="space">
+          <label for="op">Arithmetic Operations</label>
+          <select id="op">
+            <option value="">Select</option>
+            <option value="add">Addition</option>
+            <option value="sub">Subtraction</option>
+            <option value="mul">Multiplication</option>
+            <option value="div">Division</option>  
+          </select>
+          </div>
+          <div class="space">
+          <input type="button" value="Next Instruction" id="btn1">
+          <input type="button" value="Reset" id="btn2"  style="transform: translateX(50px);">
+          <input type="button" value="Execute" id="btn3"  style="float:right;">
+          </div>
+        </form>
+      </div>
+      <div id="head2">Source Code</div>
+      <div class="container2">
+          <!--<div style="border-top-left-radius: 5px;border-top-right-radius: 5px; background-color: brown; padding:10px; width:100%;">Program</div>-->
+        <div>
+            <div id="add" style="display:none;text-align:left;color:white;"><br><br><b>
+                <p id="a1">package main</p>
+                <p id="a2">import("fmt")</p>
+                <p id="a3">func main(){</p>
+                <p id="a4">&nbspvar a,b,c int;</p>
+                <p id="a5">&nbspfmt.Print("Enter The First Number : ")</p>
+                <p id="a6">&nbspfmt.Scan(&a)</p>
+                <p id="a7">&nbspfmt.Print("Enter The Second Number : ")</p>
+                <p id="a8">&nbspfmt.Scan(&b)</p>
+                <p id="a9">&nbspc=a+b;</p>
+                <p id="a10">&nbspfmt.Print("The Sum Of Number Is : ",c)</p>
+                <p id="a11">}</p>
+              </div>
+              <div id="sub" style="display:none;text-align:left;color:white;"><br><br><b>
+                  <p id="s1">package main</p>
+                  <p id="s2">import("fmt")</p>
+                  <p id="s3">func main(){</p>
+                  <p id="s4">&nbspvar a,b,c int;</p>
+                  <p id="s5">&nbspfmt.Print("Enter The First Number : ")</p>
+                  <p id="s6">&nbspfmt.Scan(&a)</p>
+                  <p id="s7">&nbspfmt.Print("Enter The Second Number : ")</p>
+                  <p id="s8">&nbspfmt.Scan(&b)</p>
+                  <p id="s9">&nbspc=a-b;</p>
+                  <p id="s10">&nbspfmt.Print("The Subtraction Of Number Is : ",c)</p>
+                  <p id="s11">}</p>
+                </div>
+                <div id="mul" style="display:none;text-align:left;color:white;"><br><br><b>
+                    <p id="m1">package main</p>
+                    <p id="m2">import("fmt")</p>
+                    <p id="m3">func main(){</p>
+                    <p id="m4">&nbspvar a,b,c int;</p>
+                    <p id="m5">&nbspfmt.Print("Enter The First Number : ")</p>
+                    <p id="m6">&nbspfmt.Scan(&a)</p>
+                    <p id="m7">&nbspfmt.Print("Enter The Second Number : ")</p>
+                    <p id="m8">&nbspfmt.Scan(&b)</p>
+                    <p id="m9">&nbspc=a*b;</p>
+                    <p id="m10">&nbspfmt.Print("The Product Of Number Is : ",c)</p>
+                    <p id="m11">}</p>
+                  </div>
+                  <div id="div" style="display:none;text-align:left;color:white;"><br><br><b>
+                      <p id="d1">package main</p>
+                      <p id="d2">import("fmt")</p>
+                      <p id="d3">func main(){</p>
+                      <p id="d4">&nbspvar a,b,c int;</p>
+                      <p id="d5">&nbspfmt.Print("Enter The First Number : ")</p>
+                      <p id="d6">&nbspfmt.Scan(&a)</p>
+                      <p id="d7">&nbspfmt.Print("Enter The Second Number : ")</p>
+                      <p id="d8">&nbspfmt.Scan(&b)</p>
+                      <p id="d9">&nbspc=a/b;</p>
+                      <p id="d10">&nbspfmt.Print("The Division Of Number Is : ",c)</p>
+                      <p id="d11">}</p>
+                    </div>
+        </div>
+      </div>
+      <div id="head3">Output</div>
+      <div class="container3">
+        <div>
+            <table>
+            <tr style="height:100px">
+            <td id="r4c1" style="display:none;color:white;"><p>a</p></td>
+            <td id="r4c2"><div class="hiddenBox" id="b1"></div></td>
+            <td id="r4c8" style="display:none;color:white;"><p>100</p></td>
+            <td id="r4c3" style="display:none;color:white;"><p style="transform: translateX(70px);">b</p></td>
+            <td id="r4c4"><div class="hiddenBox" style="transform: translateX(70px);" id="b2"></div></td>
+            <td id="r4c9" style="display:none;color:white;"><p style="transform: translateX(70px);">200</p></td>
+            <td id="r4c5" style="display:none;color:white;"><p style="transform: translateX(138px);">c</p></td>
+            <td id="r4c6"><div class="hiddenBox" id="b3" style="transform: translateX(140px);"></div></td>
+            <td id="r4c10" style="display:none;color:white;"><p style="transform: translateX(140px);">300</p></td>
+            <td id="r4c7" style="display:none;color:white;padding-top:20px;padding-bottom:20px;">Where a,b,c are variables names and 100,200,300 are memory locations where values can be stored</td>
+            </tr>
+                <tr style="height:100px">
+                  <td id="r1c1" style="display:none;color:white;">Enter The First Number : </td>
+                  <td id="r1c2" style="color:white;display:inline-block;"></td>
+                </tr>
+                <tr style="height:100px">
+                  <td id="r2c1" style="display:none;color:white;">Enter The Second Number : </td>
+                  <td id="r2c2" style="color:white;display:inline-block;"></td>
+                </tr>
+                <tr style="height:100px">
+                  <td id="r3c1" style="display:none;color:white;">The Sum Of Numbers Is : </td>
+                  <td id="r3c2" style="display:none;color:white;">The Subtraction Of Numbers Is :</td>
+                  <td id="r3c3" style="display:none;color:white;">The Multiplication Of Numbers Is :</td>
+                  <td id="r3c4" style="display:none;color:white;">The Division Of Numbers Is :</td>
+                  <td id="r3c5" style="color:white;display:inline-block;"></td>
+                </tr>
+            </table>
+        </div>
+      </div>
+      <div id="container4">
+          <div>
+              <table id="inst">
+              <tr style="height:30px;">
+                <td>1. </td>
+                <td>Enter The First Number</td>
+              <tr style="height:30px;">
+                  <td>2. </td>
+                  <td>Enter The Second Number</td>
+              </tr>
+              <tr style="height:30px;">
+                <td>3. </td>
+                <td>Please Select The Operation</td>
+              </tr>
+              <tr style="height:30px;">
+                <td>4. </td>
+                <td>Then Click The Execute Button To Start The Program</td>
+              </tr>
+              <tr style="height:50px;">
+                  <td>5. </td>
+                <td>Now Click The Next Instruction Button To Scan Each Line Of Code and give Output Accordingly</td>
+              </tr>
+              <tr style="height:50px;">
+                <td>6. </td>
+                <td>When all the lines are scanned then the program is executed succesfully</td>
+              </tr>
+              <tr style="height:50px;">
+                <td>7. </td>
+                <td>Click The Reset Button If You Want To Restart The Simulator</td>
+                </tr>
+              </tr>
+              </table>
+          </div>
+        </div>
+      <script src=".\js\arith_sim.js"></script>
+</html>

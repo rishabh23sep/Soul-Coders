@@ -1,0 +1,2 @@
+### <b>Aim</b>
+In this experiment the User will be able to understand the types of arithmetic operators in Go programming language and how to perform various arithmetic operations by using an interactive simulator.
